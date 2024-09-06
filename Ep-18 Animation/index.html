@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1c9073b405.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        wiggle: 'wiggle 1s ease-in-out infinite',
+                    },
+                    keyframes: {
+                    wiggle: {
+                    '0%, 100%': { transform: 'rotate(-3deg)' },
+                    '50%': { transform: 'rotate(3deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button class="bg-pink-500 px-5 py-3 rounded-2xl outline outline-pink-200 outline-4 text-white m-10">
+        <i class="fa-solid fa-circle-notch spin-slow mr-2 animate-spin"></i>Processing...</button>
+</body>
+</html>
